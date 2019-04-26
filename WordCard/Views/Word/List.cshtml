@@ -1,0 +1,10 @@
+﻿@using WordCard.Models;
+
+@model IEnumerable<Word>
+
+@foreach (Word w in Model){
+    <div>
+        <h1>@w.Index: @w.Name</h1>
+        <h2>Explanation: @w.Explanation</h2>
+    </div>
+}
