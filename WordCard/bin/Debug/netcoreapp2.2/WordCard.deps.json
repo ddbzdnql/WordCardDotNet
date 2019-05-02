@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "0cde6c3e500885408326574ab576e9d5a81ee6e8"
+    "signature": "a13fb9af8e786fd490827c99c5d6495ca7f16a4c"
   },
   "compilationOptions": {
     "defines": [
@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v2.2": {
       "WordCard/1.0.0": {
         "dependencies": {
+          "EntityFramework": "6.2.0",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
@@ -34,6 +35,22 @@
         },
         "compile": {
           "WordCard.dll": {}
+        }
+      },
+      "EntityFramework/6.2.0": {
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.61023.0"
+          },
+          "lib/net45/EntityFramework.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.61023.0"
+          }
+        },
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
         }
       },
       "MySqlConnector/0.49.2": {
@@ -3279,6 +3296,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "EntityFramework/6.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+aB/cnEAr9KqVMjmZwu+Fzy3EOPjCIzNsPAUyn19WbB2u3LFHd2OB3X56ohAj7EBf2hppl9M27nlRnkQxOhoAA==",
+      "path": "entityframework/6.2.0",
+      "hashPath": "entityframework.6.2.0.nupkg.sha512"
     },
     "MySqlConnector/0.49.2": {
       "type": "package",

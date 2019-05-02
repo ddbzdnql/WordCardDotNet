@@ -1,0 +1,22 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_Layout";
+    Random random = new Random();
+    int correct = random.Next(1, 4);
+}
+
+@using WordCard.Models;
+
+@model QuizView
+<head>
+    <script src="js/quiz.js"></script>
+</head>
+<div style="width: 1250px; height: 750px; background-color: #252525; margin: 0 auto; padding: 10px">
+    <div class="entry">@Model.getCurrent().Name.ToUpper()</div>
+    @for (int i = 1; i <=4; i++){
+        if (i == correct){ <div class="option" onmouseover="changeBG(this)" onmouseout="revertBG(this)">@Model.getCurrent().Explanation</div> }
+        else {<div class="option" onmouseover="changeBG(this)" onmouseout="revertBG(this)">Possible Answer @i</div>}
+    }
+</div>

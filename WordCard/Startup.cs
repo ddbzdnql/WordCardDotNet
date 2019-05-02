@@ -67,8 +67,13 @@ namespace WordCard
             app.UseMvc(routes => {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Word}/{action=List}/{id?}"
+                    template: "{controller=Admin}/{action=Display}"
                     );
+                routes.MapRoute(
+                    name: "none",
+                    template: "{controller=Word}/{action=Quiz}/{id?}"
+                    );
+
             });
 
             SeedData.initialize(app);

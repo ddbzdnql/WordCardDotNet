@@ -17,7 +17,6 @@
 /Users/shaozewang/Desktop/CSE/Industry/DotNet/Projects/WordCard/WordCard/obj/Debug/netcoreapp2.2/Razor/Pages/Error.g.cshtml.cs
 /Users/shaozewang/Desktop/CSE/Industry/DotNet/Projects/WordCard/WordCard/obj/Debug/netcoreapp2.2/Razor/Pages/Privacy.g.cshtml.cs
 /Users/shaozewang/Desktop/CSE/Industry/DotNet/Projects/WordCard/WordCard/obj/Debug/netcoreapp2.2/Razor/Pages/Shared/_CookieConsentPartial.g.cshtml.cs
-/Users/shaozewang/Desktop/CSE/Industry/DotNet/Projects/WordCard/WordCard/obj/Debug/netcoreapp2.2/Razor/Pages/Shared/_Layout.g.cshtml.cs
 /Users/shaozewang/Desktop/CSE/Industry/DotNet/Projects/WordCard/WordCard/obj/Debug/netcoreapp2.2/Razor/Pages/Shared/_ValidationScriptsPartial.g.cshtml.cs
 /Users/shaozewang/Desktop/CSE/Industry/DotNet/Projects/WordCard/WordCard/obj/Debug/netcoreapp2.2/Razor/Pages/_ViewImports.g.cshtml.cs
 /Users/shaozewang/Desktop/CSE/Industry/DotNet/Projects/WordCard/WordCard/obj/Debug/netcoreapp2.2/Razor/Pages/_ViewStart.g.cshtml.cs
@@ -28,3 +27,7 @@
 /Users/shaozewang/Desktop/CSE/Industry/DotNet/Projects/WordCard/WordCard/obj/Debug/netcoreapp2.2/WordCard.pdb
 /Users/shaozewang/Desktop/CSE/Industry/DotNet/Projects/WordCard/WordCard/obj/Debug/netcoreapp2.2/WordCard.csproj.CopyComplete
 /Users/shaozewang/Desktop/CSE/Industry/DotNet/Projects/WordCard/WordCard/obj/Debug/netcoreapp2.2/Razor/Views/Word/List.g.cshtml.cs
+/Users/shaozewang/Desktop/CSE/Industry/DotNet/Projects/WordCard/WordCard/obj/Debug/netcoreapp2.2/Razor/Views/Word/Quiz.g.cshtml.cs
+/Users/shaozewang/Desktop/CSE/Industry/DotNet/Projects/WordCard/WordCard/obj/Debug/netcoreapp2.2/Razor/Views/Admin/Login.g.cshtml.cs
+/Users/shaozewang/Desktop/CSE/Industry/DotNet/Projects/WordCard/WordCard/obj/Debug/netcoreapp2.2/Razor/Views/Admin/Display.g.cshtml.cs
+/Users/shaozewang/Desktop/CSE/Industry/DotNet/Projects/WordCard/WordCard/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_Layout.g.cshtml.cs

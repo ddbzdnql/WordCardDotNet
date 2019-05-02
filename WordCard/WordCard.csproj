@@ -9,6 +9,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="EntityFramework" Version="6.2.0" />
   </ItemGroup>
   
   <ItemGroup>
@@ -21,5 +22,7 @@
     <Folder Include="Views\" />
     <Folder Include="Controllers\" />
     <Folder Include="Views\Word\" />
+    <Folder Include="Views\Shared\" />
+    <Folder Include="Views\Admin\" />
   </ItemGroup>
 </Project>

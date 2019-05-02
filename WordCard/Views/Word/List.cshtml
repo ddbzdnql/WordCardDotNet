@@ -1,8 +1,8 @@
 ﻿@using WordCard.Models;
 
-@model IEnumerable<Word>
+@model IWordRepository
 
-@foreach (Word w in Model){
+@foreach (Word w in Model.Words){
     <div>
         <h1>@w.Index: @w.Name</h1>
         <h2>Explanation: @w.Explanation</h2>

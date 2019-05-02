@@ -10,16 +10,20 @@ using WordCard.Models;
 namespace WordCard.Controllers
 {
     public class WordController : Controller{
-        private IWordRepository repo;
+        public IWordRepository repo;
 
         public WordController(IWordRepository r) {
             repo = r;
         }
 
         // GET: /<controller>/
-        public ViewResult List()
-        {
+        public ViewResult List(){
             return View(repo.Words);
+        }
+
+        public ViewResult Quiz() {
+            QuizView quiz = new QuizView(repo);
+            return View(quiz);
         }
     }
 }

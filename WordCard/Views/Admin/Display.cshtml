@@ -1,0 +1,38 @@
+﻿@{
+    Layout = "../shared/_Layout";
+}
+
+@using WordCard.Models;
+
+
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/admin.css" />
+</head>
+
+@model IWordRepository
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="1">Index</th>
+                <th colspan="2">Word</th>
+                <th colspan="2">Explanation</th>
+                <th colspan="2">CorrectRate</th>
+                <th colspan="2">operations</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var w in Model.Words){
+                <tr class="entry">
+                    <td colspan="1">@w.Index</td>
+                    <td class="entry_title" colspan="2">@w.Name</td>
+                    <td class="entry_explanation" colspan="2">@w.Explanation</td>
+                    <td colspan="2">@w.TimesCorrect / @w.TimesAccessed</td>
+                    <td colspan="2"><button>Delete</button> <button>Change</button></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</body>

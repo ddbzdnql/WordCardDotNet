@@ -1,0 +1,22 @@
+﻿body {
+}
+
+.entry {
+    width: 1000px;
+    background-color: #404040;
+}
+
+.entry_title {
+    font-size: 22px;
+    text-align: left;
+}
+
+.entry_explanation {
+    font-size: 14px;
+    text-align: center;
+}
+
+td{
+    font-size: 14px;
+    text-align: center;
+}
