@@ -67,7 +67,7 @@ namespace WordCard
             app.UseMvc(routes => {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Admin}/{action=Display}"
+                    template: "{controller=Admin}/{action=Display}/{id?}"
                     );
                 routes.MapRoute(
                     name: "none",
