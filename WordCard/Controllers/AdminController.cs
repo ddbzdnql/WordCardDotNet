@@ -60,7 +60,7 @@ namespace WordCard.Controllers
             AddOrSave = "Add";
             Console.Write("Save called" + word==null);
             if (ModelState.IsValid) {
-                _context.Add(word);
+                _context.Words.Add(word);
                 await _context.SaveChangesAsync();
             }
             return RedirectToAction(nameof(Display));

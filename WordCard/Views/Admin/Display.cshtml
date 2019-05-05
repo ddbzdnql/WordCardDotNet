@@ -52,7 +52,7 @@
                 else{
                     <form method="post" asp-action="Save">
 
-                        <td colspan="1" class="half"><label asp-for="Index">@ViewBag.List.FindNextIndex()</label></td>
+                        <td colspan="1" class="half"><label>@ViewBag.List.FindNextIndex()</label><input asp-for="Index" value="@ViewBag.List.FindNextIndex()" type="hidden"></td>
                         <td colspan="2" class="short"><input asp-for="Name" size="15" class="none"/></td>
                         <td colspan="2" class="long"><textarea asp-for="Explanation" class="none"></textarea></td>
                         <td colspan="2" class="short"><label>-/-</label></td>
