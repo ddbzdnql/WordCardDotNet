@@ -10,8 +10,8 @@
     <link rel="stylesheet" type="text/css" href="css/admin.css" />
 </head>
 
-@model IWordRepository
-<body>
+@model Word
+<body style="margin: 0 auto">
     <table>
         <thead>
             <tr>
@@ -23,29 +23,45 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var w in Model.Words){
-                <tr class="entry">
-                    <td colspan="1" asp-for="Word.Index">@w.Index</td>
-                    <td class="entry_title" colspan="2" asp-for="Word.Name">@w.Name</td>
-                    <td class="entry_explanation" colspan="2" asp-for="Word.Explanation">@w.Explanation</td>
-                    <td colspan="2">@w.TimesCorrect / @w.TimesAccessed</td>
-                    <td colspan="2"><a href="Admin/Delete/@w.Index">Delete</a> <a href="Admin/Edit/@w.Index">Change</a></td>
-                </tr>
+            @foreach (var w in ViewBag.List.Words) {
+                if (ViewBag.EditOrUpdate != w.Index){
+                    <tr>
+                        <td colspan="1" class="half">@w.Index</td>
+                        <td colspan="2" class="short">@w.Name</td>
+                        <td colspan="2" class="long">@w.Explanation</td>
+                        <td colspan="2" class="short">@w.TimesCorrect / @w.TimesAccessed</td>
+                        <td colspan="2" class="short"><a href="Admin/Delete/@w.Index" class="danger">Delete</a> <a href="Admin/Edit/@w.Index">Change</a></td>
+                    </tr>
+                }else{
+                    <form method="post" asp-action="Update">
+                        <td colspan="1" class="half"><label>@w.Index</label><input value="@w.Index" asp-for="Index" type="hidden"/></td>
+                        <td colspan="2" class="short"><input asp-for="Name" size="15" placeholder="@w.Name" class="none"/></td>
+                        <td colspan="2" class="long"><textarea asp-for="Explanation" class="none" placeholder="@w.Explanation"></textarea></td>
+                        <td colspan="2" class="short"><label>@w.TimesCorrect / @w.TimesAccessed</label></td>
+                        <td colspan="2" class="short"><span><button type="submit">Update</button></span> <a href="Admin/Cancel">Cancel</a></td>
+
+                    </form>
+                }
             }
-            <tr class="entry">
-                 @if (ViewBag.AddOrSave == "Add") {
-                     Console.Write("ViewBag: " + ViewBag.AddOrSave);
-                     <td colspan="7"></td>
-                     <td style="float:right" colspan ="2"><a href="Admin/Create">Add</a></td>
-                 } else{
-                    <td colspan="1">Placeholder</td>
-                    <td colspan="2">Placeholder</td>
-                    <td colspan="2">Placeholder</td>
-                    <td colspan="2">Placeholder</td>
-                    <td colspan="2">Placeholder</td>
-                 }
-            </tr>
+            <tr class="form-group">
+                @if (ViewBag.AddOrSave == "Add"){
+                    Console.Write("ViewBag: " + ViewBag.AddOrSave);
+                    <td colspan="7" style="border: none"></td>
+                    <td colspan="2"><a href="Admin/Create">Add</a></td>
+                }
+                else{
+                    <form method="post" asp-action="Save">
+
+                        <td colspan="1" class="half"><label asp-for="Index">@ViewBag.List.FindNextIndex()</label></td>
+                        <td colspan="2" class="short"><input asp-for="Name" size="15" class="none"/></td>
+                        <td colspan="2" class="long"><textarea asp-for="Explanation" class="none"></textarea></td>
+                        <td colspan="2" class="short"><label>-/-</label></td>
+                        <td colspan="2" class="short"><span><button type="submit">Save</button></span> <a href="Admin/Cancel">Cancel</a></td>
+
+                    </form>
+                }
+                </td>
         </tbody>
     </table>
-
 </body>
+

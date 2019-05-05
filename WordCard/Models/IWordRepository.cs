@@ -6,5 +6,7 @@ namespace WordCard.Models
     public interface IWordRepository{
         IQueryable<Word> Words { get; }
         MyDbContext ctxt { get; }
+
+        int FindNextIndex();
     }
 }

@@ -12,6 +12,15 @@ namespace WordCard.Models
             ctxt = context;
         }
 
-
+        public int FindNextIndex() {
+            int i = 1;
+            foreach (var w in Words) { 
+                if (i != w.Index) {
+                    return i;
+                }
+                i++;
+            }
+            return i;
+        }
     }
 }
